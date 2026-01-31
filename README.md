@@ -10,14 +10,15 @@
 1.	Установлены Docker и Docker Compose на ВМ Debian:
 sudo apt update
 sudo apt install docker.io docker-compose-plugin -y
-2.	Создан файл /etc/docker/daemon.json для настройки зеркал репозиториев.
-3.	Зарегистрирован репозиторий custom-nginx на Docker Hub.
-4.	Скачан образ nginx:1.21.1:
+![Скриншот шага 1](images/1.png)
+3.	Создан файл /etc/docker/daemon.json для настройки зеркал репозиториев.
+4.	Зарегистрирован репозиторий custom-nginx на Docker Hub.
+5.	Скачан образ nginx:1.21.1:
 docker pull nginx:1.21.1
-5.	Создан Dockerfile:
+6.	Создан Dockerfile:
 FROM nginx:1.21.1
 COPY index.html /usr/share/nginx/html/index.html
-6.	Создан файл index.html с содержимым:
+7.	Создан файл index.html с содержимым:
 <html>
 <head>Hey, ZGU!</head>
 <body><p>I will be IT Engineer!</p></body>
